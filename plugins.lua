@@ -39,7 +39,7 @@ local plugins = {
         "tailwindcss-language-server ",
         "typescript-language-server",
         "pyright",
-        "omnisharp",
+        "omnisharp-mono",
 
         -- Formatters
         "clang-format",

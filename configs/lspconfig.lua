@@ -14,10 +14,10 @@ lspconfig.clangd.setup {
   },
 }
 
-local omnisharp_exec = vim.fn.expand "~/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll"
+local omnisharp_exec = vim.fn.expand "~/.local/share/nvim/mason/packages/omnisharp-mono/run"
 
 lspconfig.omnisharp.setup {
-  cmd = { "dotnet", omnisharp_exec },
+  cmd = { omnisharp_exec },
   filetypes = { 'cs', 'razor'},
   on_attach = function(client, bufnr)
     client.server_capabilities.signatureHelpProvider = false
@@ -26,43 +26,14 @@ lspconfig.omnisharp.setup {
   capabilities = capabilities,
 }
 
-lspconfig.marksman.setup {
-  on_attach = function(client, bufnr)
-    client.server_capabilities.signatureHelpProvider = false
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities,
-}
+local servers = { "cssls", "marksman", "tsserver", "tailwindcss", "pyright"}
 
-lspconfig.cssls.setup {
-  on_attach = function(client, bufnr)
-    client.server_capabilities.signatureHelpProvider = false
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities,
-}
-
-lspconfig.tsserver.setup {
-  on_attach = function(client, bufnr)
-    client.server_capabilities.signatureHelpProvider = false
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities,
-}
-
-lspconfig.tailwindcss.setup {
-  on_attach = function(client, bufnr)
-    client.server_capabilities.signatureHelpProvider = false
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities,
-}
-
-lspconfig.pyright.setup {
-  on_attach = function(client, bufnr)
-    client.server_capabilities.signatureHelpProvider = false
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities,
-}
-
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    on_attach = function(client, bufnr)
+      client.server_capabilities.signatureHelpProvider = false
+      on_attach(client, bufnr)
+    end,
+    capabilities = capabilities
+  }
+end
