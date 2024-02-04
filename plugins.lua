@@ -40,6 +40,7 @@ local plugins = {
         "typescript-language-server",
         "pyright",
         "omnisharp-mono",
+        "lua-language-server",
 
         -- Formatters
         "clang-format",

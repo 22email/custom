@@ -6,6 +6,7 @@ mappings.disabled = {
     ["<leader>wl"] = "",
     ["<leader>wr"] = "",
     ["<leader>wk"] = "",
+    ["<leader>ch"] ="",
     ["<leader>wK"] = "",
     ["<C-n>"] = "",
   }
@@ -24,6 +25,7 @@ mappings.general = {
     ["J"] = { "mzJ`z", "enhanced nvim builtin" },
     ["<leader>y"] = { [["+y"]], "Copy to system clipboard" },
     ["<leader>Y"] = { [["+Y"]], "Copy line to system clipboard" },
+    ["<leader>cs"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
   },
 
   v = {
