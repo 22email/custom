@@ -70,6 +70,10 @@ local plugins = {
     ft = "java",
   },
   {
+    "elkowar/yuck.vim",
+    ft = "yuck",
+  },
+  {
     "stevearc/dressing.nvim",
     event = "VeryLazy",
     opts = { require "custom.configs.dressing" },
