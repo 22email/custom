@@ -48,6 +48,7 @@ local plugins = {
         "prettier",
         "google-java-format",
         "csharpier",
+        "mdformat",
       },
     },
   },
