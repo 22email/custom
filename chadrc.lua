@@ -6,8 +6,7 @@ M.lazy_nvim = { performance = {
       disabled_plugins = {
         "2html_plugin",
         "tohtml",
-        "getscript",
-        "getscriptPlugin",
+        "getscript", "getscriptPlugin",
         "gzip",
         "logipat",
         "netrw",
@@ -59,10 +58,10 @@ M.ui = {
    end
   },
   statusline = {
-    theme = "default", -- default/vscode/vscode_colored/minimal
+    theme = "vscode", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
-    separator_style = "round",
+    separator_style = "block",
     overriden_modules = nil,
   },
   nvdash = {
