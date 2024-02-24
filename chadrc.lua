@@ -51,7 +51,13 @@ M.ui = {
     },
   },
 
-  transparency = true,
+  transparency = false,
+  tabufline = {
+    overriden_modules = function(modules)
+           modules[#modules+1] = modules[1]
+           table.remove(modules,1)
+   end
+  },
   statusline = {
     theme = "default", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
