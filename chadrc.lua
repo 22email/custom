@@ -36,9 +36,9 @@ M.lazy_nvim = { performance = {
 }
 
 M.ui = {
-  theme = "kanagawa",
+  theme = "meut",
   changed_themes = {
-    kanagawa = {
+    meut = {
       base_30 = {
         nord_blue = "#6a9589",
         blue = "#6a9589",
@@ -58,10 +58,10 @@ M.ui = {
    end
   },
   statusline = {
-    theme = "vscode", -- default/vscode/vscode_colored/minimal
+    theme = "minimal", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
-    separator_style = "block",
+    separator_style = "round",
     overriden_modules = nil,
   },
   nvdash = {
