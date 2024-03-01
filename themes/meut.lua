@@ -42,14 +42,14 @@ M.base_16 = {
   base05 = "#b1b4b1",
   base06 = "#bec1be",
   base07 = "#c2c4c2",
-  base08 = "#e7ae77",
-  base09 = "#d08666",
+  base08 = "#d08666",
+  base09 = "#e7ae77",
   base0A = "#98bd68",
   base0B = "#6a9440",
   base0C = "#576d9f",
   base0D = "#ac8eb6",
   base0E = "#cc6666",
-  base0F = "#a54242",
+  base0F = "#8aaece",
 }
 
 M.type = "dark"

@@ -40,7 +40,7 @@ M.ui = {
   changed_themes = {
     meut = {
       base_30 = {
-        nord_blue = "#6a9589",
+        meut_blue = "#6a9589",
         blue = "#6a9589",
         red = "#c34043",
         green = "#76946a",
@@ -58,7 +58,7 @@ M.ui = {
    end
   },
   statusline = {
-    theme = "minimal", -- default/vscode/vscode_colored/minimal
+    theme = "default", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
     separator_style = "round",
