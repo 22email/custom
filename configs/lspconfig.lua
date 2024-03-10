@@ -14,25 +14,25 @@ lspconfig.clangd.setup {
   },
 }
 
-local omnisharp_exec = vim.fn.expand "~/.local/share/nvim/mason/packages/omnisharp-mono/run"
+-- local omnisharp_exec = vim.fn.expand "~/.local/share/nvim/mason/packages/omnisharp-mono/run"
+--
+-- lspconfig.omnisharp.setup {
+--   cmd = { omnisharp_exec },
+--   filetypes = { "cs", "razor" },
+--   on_attach = function(client, bufnr)
+--     client.server_capabilities.signatureHelpProvider = false
+--     on_attach(client, bufnr)
+--   end,
+--   capabilities = capabilities,
+-- }
 
-lspconfig.omnisharp.setup {
-  cmd = { omnisharp_exec },
-  filetypes = { "cs", "razor" },
-  on_attach = function(client, bufnr)
-    client.server_capabilities.signatureHelpProvider = false
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities,
-}
-
-lspconfig.gdscript.setup {
-  on_attach = function(client, bufnr)
-    client.server_capabilities.signatureHelpProvider = false
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities,
-}
+-- lspconfig.gdscript.setup {
+--   on_attach = function(client, bufnr)
+--     client.server_capabilities.signatureHelpProvider = false
+--     on_attach(client, bufnr)
+--   end,
+--   capabilities = capabilities,
+-- }
 
 local servers = { "cssls", "marksman", "tsserver", "tailwindcss", "pyright" }
 

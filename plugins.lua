@@ -21,50 +21,24 @@ local plugins = {
     end,
   },
   {
+    "nvim-treesitter/nvim-treesitter",
+    event = { "BufReadPost", "BufNewFile" },
+    cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
+    build = ":TSUpdate",
+    opts = function()
+      return require "custom.configs.treesitter"
+    end,
+    config = function(_, opts)
+      dofile(vim.g.base46_cache .. "syntax")
+      require("nvim-treesitter.configs").setup(opts)
+    end,
+  },
+  {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
     opts = function()
       return require "custom.configs.null-ls"
     end,
-  },
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        -- LSP
-        "clangd",
-        "jdtls",
-        "marksman",
-        "css-lsp",
-        "tailwindcss-language-server ",
-        "typescript-language-server",
-        "pyright",
-        "omnisharp-mono",
-        "lua-language-server",
-
-        -- Formatters
-        "clang-format",
-        "stylua",
-        "prettier",
-        "google-java-format",
-        "csharpier",
-        "mdformat",
-      },
-    },
-  },
-  {
-    "toppair/peek.nvim",
-    event = "VeryLazy",
-    build = "deno task --quiet build:fast",
-    config = function()
-      require("peek").setup()
-      -- refer to `configuration to change defaults`
-      vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
-      vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
-    end,
-  },
-  {
-    "ThePrimeagen/harpoon", -- Actually use harpoon u
   },
   {
     "mfussenegger/nvim-jdtls",
