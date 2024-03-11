@@ -41,10 +41,6 @@ local plugins = {
     end,
   },
   {
-    "mfussenegger/nvim-jdtls",
-    ft = "java",
-  },
-  {
     "elkowar/yuck.vim",
     ft = "yuck",
   },
